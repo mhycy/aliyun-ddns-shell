@@ -73,7 +73,7 @@ if [[ -z "$CONFIG_FILE_NAME" ]]; then
 fi
 #日志储存目录
 if [[ -z "$LOG_FILE_PATH" ]]; then
-    LOG_FILE_PATH="./log-info.log"
+    LOG_FILE_PATH="/var/log/aliyun-ddns.log"
 fi
 # 日志文件名
 if [[ -z "$LOG_FILE_NAME" ]]; then
