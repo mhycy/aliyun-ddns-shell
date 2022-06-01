@@ -47,7 +47,7 @@ echo -e "${color_green_start}
 ${color_end}"
 }
 
-fun_show_version_info
+# fun_show_version_info
 
 #全局变量定义
 
