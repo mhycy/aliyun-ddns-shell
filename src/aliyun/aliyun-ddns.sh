@@ -77,7 +77,7 @@ if [[ -z "$CONFIG_FILE_NAME" ]]; then
 fi
 #日志储存目录
 if [[ -z "$LOG_FILE_PATH" ]]; then
-    LOG_FILE_PATH="/var/log/aliyun-ddns.log"
+    LOG_FILE_PATH="/dev/null"
 fi
 # 日志文件名
 if [[ -z "$LOG_FILE_NAME" ]]; then
@@ -547,7 +547,9 @@ function fun_save_config(){
     # 写入配置文件
     fun_wirte_log "${message_info_tag}正在保存配置文件......"
     fun_setting_file_save_dir
-    rm -f ${CONFIG_FILE_PATH}
+    if [[ "${CONFIG_FILE_PATH}" != "/dev/null" ]]; then
+        rm -f ${CONFIG_FILE_PATH}
+    fi
     cat>${CONFIG_FILE_PATH}<<EOF
     var_check_online_url="${var_check_online_url}"
     var_check_online_retry_times=${var_check_online_retry_times}
