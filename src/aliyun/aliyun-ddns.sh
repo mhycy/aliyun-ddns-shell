@@ -58,17 +58,27 @@ UBUNTU_OS_RELEASE="ubuntu"
 DEBIAN_OS_RELEASE="debian"
 
 # 配置、日志文件存放目录
-FILE_SAVE_DIR=""
+if [[ -z "$FILE_SAVE_DIR" ]]; then
+    FILE_SAVE_DIR="./"
+fi
 # 目录前缀
 FILE_DIR_PREFIX="aliyun-ddns"
 #配置文件路径
-CONFIG_FILE_PATH=""
+if [[ -z "$CONFIG_FILE_PATH" ]]; then
+    CONFIG_FILE_PATH=""
+fi
 # 配置文件名
-CONFIG_FILE_NAME="config.cfg"
+if [[ -z "$CONFIG_FILE_NAME" ]]; then
+    CONFIG_FILE_NAME="config.cfg"
+fi
 #日志储存目录
-LOG_FILE_PATH=""
+if [[ -z "$LOG_FILE_PATH" ]]; then
+    LOG_FILE_PATH="./"
+fi
 # 日志文件名
-LOG_FILE_NAME="log-info.log"
+if [[ -z "$LOG_FILE_NAME" ]]; then
+    LOG_FILE_NAME="log-info.log"
+fi
 
 #当前时间戳
 var_now_timestamp=""
