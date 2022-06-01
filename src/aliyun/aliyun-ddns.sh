@@ -59,13 +59,17 @@ DEBIAN_OS_RELEASE="debian"
 
 # 配置、日志文件存放目录
 if [[ -z "$FILE_SAVE_DIR" ]]; then
-    FILE_SAVE_DIR="./config.cfg"
+    FILE_SAVE_DIR="./"
 fi
+
 # 目录前缀
-FILE_DIR_PREFIX="aliyun-ddns"
+if [[ -z "$FILE_DIR_PREFIX" ]]; then
+    FILE_DIR_PREFIX="aliyun-ddns"
+fi
+
 #配置文件路径
 if [[ -z "$CONFIG_FILE_PATH" ]]; then
-    CONFIG_FILE_PATH=""
+    CONFIG_FILE_PATH="./config.cfg"
 fi
 # 配置文件名
 if [[ -z "$CONFIG_FILE_NAME" ]]; then
