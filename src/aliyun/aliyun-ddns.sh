@@ -59,7 +59,7 @@ DEBIAN_OS_RELEASE="debian"
 
 # 配置、日志文件存放目录
 if [[ -z "$FILE_SAVE_DIR" ]]; then
-    FILE_SAVE_DIR="./"
+    FILE_SAVE_DIR="./config.cfg"
 fi
 # 目录前缀
 FILE_DIR_PREFIX="aliyun-ddns"
@@ -73,7 +73,7 @@ if [[ -z "$CONFIG_FILE_NAME" ]]; then
 fi
 #日志储存目录
 if [[ -z "$LOG_FILE_PATH" ]]; then
-    LOG_FILE_PATH="./"
+    LOG_FILE_PATH="./log-info.log"
 fi
 # 日志文件名
 if [[ -z "$LOG_FILE_NAME" ]]; then
